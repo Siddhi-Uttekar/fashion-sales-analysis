@@ -34,3 +34,16 @@ Both are documented in full in [`docs/insights.md`](docs/insights.md).
 A simple linear regression baseline (scikit-learn) predicts next month's revenue at ~$26M. **Known limitation:** a straight-line model can't capture the December/January seasonality found in the SQL analysis above — a deliberate scoping choice given time constraints, not an oversight. A seasonal model (e.g. Prophet) would be the natural next step.
 
 ## Structure
+```
+sql/schema.sql        — the real database schema (stores, products, customers, transactions)
+sql/views.sql          — pre-aggregated, currency-corrected KPI views
+sql/queries.sql         — ~18 business queries: joins, CTEs, window functions, CASE bucketing
+notebooks/explore.py    — Python analysis pulling from the same Postgres database
+docs/architecture.md     — pipeline diagram and tool choices
+docs/insights.md          — full findings, Observation → Cause → Action format
+docs/screenshots/          — Power BI dashboard pages
+docs/progress-log.md        — build log and scope decisions
+```
+
+## What's not in scope (and why)
+Recommendation engine and a dedicated backend/frontend for this project were deliberately cut — my existing full-stack and GenAI projects already demonstrate that skill set. This project's job was to show I can work with real data end-to-end (SQL → BI → Python), not to duplicate work shown elsewhere on my resume.
