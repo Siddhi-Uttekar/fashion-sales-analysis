@@ -5,4 +5,4 @@ __pycache__/
 .env
 node_modules/
 *.pbix
-
+docs/GUIDE.md

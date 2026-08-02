@@ -11,7 +11,6 @@ Analytics project on a 6.4M-row global fashion retail transaction dataset — SQ
 - **Python (Pandas, scikit-learn)** — analysis and a baseline revenue forecast
 
 ## What I found
-
 **Revenue mix:** Feminine (~$293M) and Masculine (~$245M) categories lead; Children's (~$64M) trails by ~4x. Coats & Blazers and Pants & Jeans are the top sub-categories by revenue; Accessories stands out as a high-volume, lower-price line.
 
 **Seasonality:** revenue spikes sharply every December (+130-135% month-over-month, both years in the dataset) and crashes in January (-74 to -76%) — a strong, predictable holiday pattern, found using a SQL window function (`LAG()`) to compute month-over-month growth.
