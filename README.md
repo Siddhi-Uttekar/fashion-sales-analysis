@@ -1,4 +1,4 @@
-# Fashion Intelligence Platform
+# fashion-sales-analysis
 
 Analytics project on a 6.4M-row global fashion retail transaction dataset — SQL, Power BI, and Python, built as if scoping and delivering a real analytics engagement.
 
