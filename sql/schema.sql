@@ -69,3 +69,17 @@ CREATE INDEX idx_transactions_date ON transactions(date);
 CREATE INDEX idx_transactions_product ON transactions(product_id);
 CREATE INDEX idx_transactions_store ON transactions(store_id);
 CREATE INDEX idx_transactions_customer ON transactions(customer_id);
+
+
+--currency correction
+
+ALTER TABLE transactions ADD COLUMN invoice_total_usd NUMERIC;
+
+UPDATE transactions
+SET invoice_total_usd = CASE currency
+    WHEN 'USD' THEN invoice_total
+    WHEN 'EUR' THEN invoice_total * 1.08
+    WHEN 'GBP' THEN invoice_total * 1.27
+    WHEN 'CNY' THEN invoice_total * 0.14
+    ELSE invoice_total
+END;
