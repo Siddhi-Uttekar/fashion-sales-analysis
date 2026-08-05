@@ -4,7 +4,7 @@ from urllib.parse import quote_plus
 
 pd.options.display.float_format = '{:,.2f}'.format
 
-password = quote_plus("REDACTED_PASSWORD")  # <-- put your real password here
+password = quote_plus("REDACTED_PASSWORD")  
 engine = create_engine(f"postgresql+psycopg2://postgres:{password}@localhost:5432/fashion_db")
 
 fx_to_usd = {"USD": 1.0, "EUR": 1.08, "GBP": 1.27, "CNY": 0.14}
