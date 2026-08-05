@@ -23,7 +23,8 @@ UPDATE stores SET country = 'China' WHERE country = '中国';
 -- 1. REVENUE & CATEGORY
 ------------------------------------------------------------
 
--- Q: What is total revenue by category, in mixed/raw currency? (WRONG on its own — kept to show the before/after of the currency fix)
+-- Q: What is total revenue by category, in mixed/raw currency?
+(WRONG on its own — kept to show the before/after of the currency fix)
 SELECT
     p.category,
     SUM(t.invoice_total) AS total_revenue_raw_mixed_currency

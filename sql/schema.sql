@@ -1,8 +1,3 @@
--- Fashion Intelligence Platform — Real Schema
--- Matches the actual database built in pgAdmin against the
--- Global Fashion Retail Sales dataset. Column types reflect
--- how each CSV's columns were actually typed during creation.
-
 CREATE TABLE stores (
     store_id      INT PRIMARY KEY,
     country       TEXT,
